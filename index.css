@@ -1,0 +1,241 @@
+
+@media (max-width: 576px) {
+    /* Adjust the font size for smaller screens */
+    h1 {
+      font-size: 24px;
+    }
+    
+    /* Adjust the margin for smaller screens */
+    .container {
+      margin: 20px;
+    }
+  }
+@font-face {
+    font-family: 'Nexa';
+    src: url('FontsFree-Net-n1.ttf.meta') format('truetype');
+  }
+  
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    scroll-behavior: smooth;
+}
+body{
+    
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Nexa', sans-serif;
+    background: linear-gradient(#292929,#575757);
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+header .logo{
+    padding: 6px 2px;
+    color: #fff;
+   
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+}
+
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a{
+    text-decoration: none;
+    padding: 6px 2px;
+    color: #fff;
+    border-radius: 20px
+}
+
+header ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+   
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+header ul li a:hover::after,
+.active::after {
+    transform: scaleX(1);
+}
+
+header ul li a:hover,
+.active {
+    background: #ffffff;
+    color: #252525;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#353535,transparent);
+    z-index: 1000;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#moon{
+    mix-blend-mode: screen;
+}
+section img#mountains_front{
+    z-index: 20;
+    
+    
+}
+
+#text{
+    right: -1550px;
+    position: absolute;
+    color: #fff;
+    
+    white-space: nowrap;
+    font-size: 17.5vw;
+
+    z-index: 9;
+    
+
+}
+#btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(150px);
+}
+.sec{
+    position: relative;
+    align-items:  center;
+    padding:  100px;
+    background: #363636;
+    justify-content: center;
+}
+.sec h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+    align-items:  center;
+    justify-content: center;
+}
+.sec h3{
+    font-size: 1em;
+    color: #fff;
+    align-items:  center;
+    justify-content: center;
+}
+
+.main{
+    width: 100%;
+    height: 32vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+.icon{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background: #fff;
+    margin: 15px;
+    text-align: center;
+    font-size: 50px;
+    line-height: 100px;
+    font-family: sans-serif;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px rgba(150, 150, 150, .3);
+    transition: all .3s ease-out;
+}
+
+
+.icon .fa-facebook-f{
+    color: #555555;
+}
+
+.icon .fa-twitter{
+    color: #e7e7e7;
+}
+
+.icon .fa-linkedin-in{
+    color: #5a5a5a;
+}
+
+.icon .fa-github{
+    color: #5a5a5a;
+}
+
+.icon .fa-youtube{
+    color: #5a5a5a;
+}
+
+/* responsive */
+
+.container {
+    width: 216;
+    max-width: 333px;
+    height: 30vh;
+    margin: auto  auto;
+}
+
+.glass {
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 
+}
